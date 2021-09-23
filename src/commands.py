@@ -22,3 +22,4 @@ class QuoteCommands(commands.Cog):
   @createQuote.error
   async def standard_errors(self, ctx, error):
       await ctx.send(error)
+      print(error)
