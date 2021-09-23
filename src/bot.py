@@ -22,5 +22,4 @@ try:
 except KeyboardInterrupt:
   print('Exiting...')
 finally:
-  pass    
-  # config.store()
+  pass
