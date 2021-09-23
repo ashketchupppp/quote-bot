@@ -8,4 +8,4 @@ COPY . /discord-bot
 
 RUN pip3 install -r /discord-bot/requirements.txt
 
-ENTRYPOINT ["python", "/discord-bot/src/bot.py"]
+ENTRYPOINT python /discord-bot/src/bot.py $TOKEN $MONGO_CONN_STR

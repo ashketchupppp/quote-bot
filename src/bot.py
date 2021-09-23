@@ -13,8 +13,13 @@ args = {
   'TOKEN': None, 
   'MONGO_CONN_STR': None
 }
+i = 1
 for arg in args:
   args[arg] = os.getenv(arg)
+  if not args[arg]:
+    args[arg] = sys.argv[i]
+  i += 1
+print(args)
 print(args)
 print('Connecting to mongo...')
 quotes = Quotes(args['MONGO_CONN_STR'])
