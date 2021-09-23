@@ -1,4 +1,5 @@
 import os
+import pathlib
 from discord.ext import commands
 from dotenv import load_dotenv
 import pymongo
@@ -6,7 +7,8 @@ import pymongo
 from commands import QuoteCommands
 from mongo import Quotes
 
-load_dotenv()
+envPath = pathlib.Path(__file__).parent.parent.resolve()
+load_dotenv(envPath)
 TOKEN = os.getenv('TOKEN')
 MONGO_CONN_STR = os.getenv('MONGO_CONN_STR')
 
