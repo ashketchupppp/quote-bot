@@ -18,10 +18,7 @@ i = 1
 # this will break if you use a combination of envvars and args, use one or the other please thank you
 for arg in args:
   args[arg] = os.getenv(arg)
-  if not args[arg]:
-    args[arg] = sys.argv[i]
-  i += 1
-print(args)
+
 print('Connecting to mongo...')
 quotes = Quotes(args['MONGO_CONN_STR'])
 print('Successful connection made to mongo')

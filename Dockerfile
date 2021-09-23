@@ -1,4 +1,4 @@
-FROM python:3.9-buster
+FROM python:3.9-alpine
 ARG TOKEN
 ARG MONGO_CONN_STR
 ENV TOKEN=$TOKEN
